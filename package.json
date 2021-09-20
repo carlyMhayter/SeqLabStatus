@@ -1,0 +1,23 @@
+{
+  "name": "seqlabstatus",
+  "version": "1.0.0",
+  "description": "",
+  "private": "true",
+  "main": "script.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack",
+  },
+  "author": "Carly Hayter",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "luxon": "^2.0.2"
+  },
+  "devDependencies": {
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.8.0"
+  }
+}

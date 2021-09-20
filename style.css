@@ -1,0 +1,311 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+
+:root {
+  --medGrey: rgb(187, 187, 187);
+  --dkGrey: rgb(150, 150, 150);
+  --vltGrey: rgb(240, 240, 240);
+  --ltGrey: rgb(219, 219, 219);
+  --lighterGrey: rgb(202, 202, 202);
+  --dkGreen: rgb(117, 126, 115);
+  --medGreen: rgb(209, 216, 206);
+  --vdkGreen: rgb(76, 92, 72);
+
+  --dkRed: rgb(126, 118, 115);
+  --medRed: rgb(212, 200, 193);
+  --vdkRed: rgb(92, 78, 72);
+  --brightRed: rgb(226, 134, 134);
+
+  --dkYellow: rgb(126, 124, 115);
+  --medYellow: rgb(168, 165, 155);
+  --vdkYellow: rgb(92, 89, 72);
+
+  --vdkGrey: rgb(85, 85, 85);
+  --almostBlack: rgb(44, 44, 44);
+
+  --ltBlue: #c4dbf3;
+  --medBlue: #86a6c9;
+}
+
+body {
+  background-color: whitesmoke;
+  margin: 0px 0px;
+  min-height: 100%;
+  font-family: "Source Sans Pro", sans-serif;
+  height: 100%;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.master-container {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  background: var(--dkGrey);
+  width: 100vw;
+  text-align: center;
+  height: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+  .navlink {
+    font-size: 0.75em;
+  }
+}
+
+/***********************************************************************
+ *  Navbar Container
+ **********************************************************************/
+.navbar-container {
+  background: var(--ltGrey);
+  display: flex;
+  flex-direction: row;
+  margin: 0px 0px;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  min-width: 100vw;
+}
+.logoImage {
+  width: 30vw;
+  max-width: 300px;
+}
+
+.navbar-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  min-width: 100vw;
+  padding: none;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--almostBlack);
+  font-weight: 900;
+}
+
+.navlink {
+  padding: none;
+}
+/***********************************************************************
+ *  Cover Image
+ **********************************************************************/
+.cover-container {
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cover-text {
+  color: var(--dkGrey);
+  font-size: 2.3em;
+  font-weight: bolder;
+  margin: 2em 0em 2em 0em;
+  text-align: center;
+  text-shadow: -1px 1px 20px var(--medGrey);
+}
+
+.refresh-button {
+  background-color: (var(--ltBlue));
+  border-radius: 3px;
+  border: 1px solid var(--lighterGrey);
+  font-family: "Source Sans Pro";
+  font-weight: 100;
+  letter-spacing: 0.08em;
+  font-size: 1.3em;
+  box-shadow: 1px 1px 3px 2px var(--vltGrey);
+  margin: 0em 0em 2em 0em;
+  padding: 0.2em 0.5em;
+}
+.refresh-button:hover {
+  transition: 0.5s;
+  cursor: pointer;
+  background-color: var(--vltGrey);
+  border-radius: 3px;
+  border: 1px solid var(--medGrey);
+  font-family: "Source Sans Pro";
+  font-size: 1.3em;
+  box-shadow: 1px 2px 3px 3px var(--medGrey);
+}
+
+p {
+  margin: 0px 0px;
+}
+/***********************************************************************
+ *  footer
+ **********************************************************************/
+.footer-container {
+  background: var(--vltGrey);
+  min-height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/***********************************************************************
+ *  Instrument Status Containers
+ **********************************************************************/
+.content-container {
+  background: var(--ltGrey);
+  text-align: center;
+  min-height: 60vh;
+  color: var(--dkGrey);
+}
+
+.instru {
+  min-width: 300px;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 5px 5px;
+  border: #fff;
+  transition: 0.5s;
+}
+
+.green {
+  background-color: var(--medGreen);
+  color: var(--vdkGreen);
+  border: 5px solid var(--dkGreen);
+}
+
+.red {
+  background-color: var(--medRed);
+  color: var(--vdkRed);
+  border: 5px solid var(--dkRed);
+}
+
+.yellow {
+  background-color: var(--medYellow);
+  color: var(--vdkYellow);
+  border: 5px solid var(--dkYellow);
+}
+
+.grey {
+  background-color: var(--medGrey);
+  color: var(--almostBlack);
+  border: 5px solid var(--vdkGrey);
+}
+
+.instru:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+}
+
+.instru-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 0.5em;
+}
+
+/***********************************************************************
+ *  instrument info styles 
+ **********************************************************************/
+
+.instru-title {
+  font-size: 35px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  border-radius: 5px;
+  border: 1px solid var(--dkGrey);
+  color: var(--almostBlack);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.instru-status {
+  font-size: 1em;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.progress-bar {
+  height: 10px;
+}
+
+.progress-bar-div {
+  width: 100%;
+  height: 15px;
+  display: flex;
+}
+
+.progress-total {
+  background-color: var(--ltGrey);
+  height: 10px;
+  border-radius: 5px;
+  border-bottom: 1px solid var(--almostBlack);
+  border-top: 1px solid white;
+}
+
+.progress-current {
+  background-color: var(--medBlue);
+  height: 10px;
+  border-radius: 5px;
+  width: 1%;
+  border-right: 5px solid rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.basic-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 25%;
+}
+.up-info {
+  width: 250px;
+}
+
+/* .up-instru:hover {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 90%;
+  transition:  0.5s;
+  height: 20%; 
+} */
+
+.fcid-text {
+  color: rgb(247, 248, 209);
+  background-color: var(--vdkGreen);
+  margin: 10px 2px;
+  border-radius: 5px;
+}
+
+.bw-text {
+  color: var(--almostBlack);
+  width: 250px;
+}
+
+/* .down-instru:hover .hide-down {
+  color: rgb(224, 224, 224);
+  font-weight: bolder;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 90%;
+  transition: opacity 0.5s;
+  background-color: rgba(70, 49, 44, 0.89);
+  border-radius: 10px;
+  padding: 5px 5px;
+} */
+
+.idit-num {
+  color: var(--brightRed);
+  background-color: var(--vdkRed);
+  font-size: 1.25em;
+}

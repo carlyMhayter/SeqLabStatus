@@ -1,0 +1,32 @@
+const instruments = [
+  {
+    instrumentName: "BB506",
+    FCID: "FB1234567",
+    currentCycle: "12",
+    totalCycle: "120",
+    backW: true,
+    instrumentStatus: "",
+    instrumentType: "",
+    IDITnumber: "",
+  },
+  {
+    instrumentName: "BB612",
+    FCID: "FB1234567",
+    currentCycle: "57",
+    totalCycle: "180",
+    backW: true,
+    instrumentStatus: "",
+    instrumentType: "",
+    IDITnumber: "",
+  },
+  {
+    instrumentName: "M03",
+    FCID: "FB1234567",
+    currentCycle: "23",
+    totalCycle: "102",
+    backW: false,
+    instrumentStatus: "",
+    instrumentType: "",
+    IDITnumber: "",
+  },
+];
