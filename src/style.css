@@ -270,15 +270,6 @@ p {
   width: 250px;
 }
 
-/* .up-instru:hover {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  opacity: 90%;
-  transition:  0.5s;
-  height: 20%; 
-} */
-
 .fcid-text {
   color: rgb(247, 248, 209);
   background-color: var(--vdkGreen);
@@ -291,21 +282,30 @@ p {
   width: 250px;
 }
 
-/* .down-instru:hover .hide-down {
-  color: rgb(224, 224, 224);
-  font-weight: bolder;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  opacity: 90%;
-  transition: opacity 0.5s;
-  background-color: rgba(70, 49, 44, 0.89);
-  border-radius: 10px;
-  padding: 5px 5px;
-} */
-
 .idit-num {
   color: var(--brightRed);
   background-color: var(--vdkRed);
   font-size: 1.25em;
+}
+
+.startTime-info {
+  font-size: 1.15em;
+  padding-top: 10px;
+}
+
+.endTime-text {
+  font-size: 1.15em;
+  font-style: italic;
+  padding-top: 10px;
+  color: rgb(75, 50, 50);
+}
+.endTime-time {
+  background-color: rgba(254, 255, 251, 0.5);
+  padding: 5px;
+  font-size: 1.25em;
+  font-weight: 900;
+  color: rgb(75, 50, 50);
+  text-shadow: 0px 0px 5px rgba(255, 109, 30, 0.351);
+  border-radius: 5px;
+  border: 1px solid rgba(255, 109, 30, 0.351);
 }

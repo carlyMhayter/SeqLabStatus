@@ -1,28 +1,27 @@
-// var http = require("http");
-var express = require("express");
-var cors = require("cors");
-var app = express();
-
-const seqData = [
+export const instruments = [
   {
     instrumentName: "M02",
     FCID: "AA1234567-ABB",
     currentCycle: 11,
-    totalCycle: 175,
+    totalCycle: 115,
     backW: true,
     instrumentStatus: "operational",
     instrumentType: "George",
     IDITnumber: "NA",
+    startTime: "2020-05-15T08:03:11",
+    cycleLength: 3,
   },
   {
     instrumentName: "M04",
     FCID: "AA1234567-ABB",
     currentCycle: 115,
-    totalCycle: 175,
+    totalCycle: 125,
     backW: false,
     instrumentStatus: "operational",
     instrumentType: "George",
     IDITnumber: "NA",
+    startTime: "2020-05-15T08:17:53",
+    cycleLength: 3,
   },
   {
     instrumentName: "M05",
@@ -33,26 +32,32 @@ const seqData = [
     instrumentStatus: "operational",
     instrumentType: "George",
     IDITnumber: "NA",
+    startTime: "2020-05-15T09:41:25",
+    cycleLength: 3,
   },
   {
     instrumentName: "B01",
     FCID: "AA1234567-ABB",
-    currentCycle: 174,
-    totalCycle: 175,
+    currentCycle: 34,
+    totalCycle: 52,
     backW: true,
     instrumentStatus: "validation needed",
     instrumentType: "Barracuda",
     IDITnumber: "IDIT-1605",
+    startTime: "2020-05-15T07:31:00",
+    cycleLength: 5,
   },
   {
     instrumentName: "B02",
     FCID: "AA1234567-ABB",
     currentCycle: 173,
-    totalCycle: 175,
+    totalCycle: 215,
     backW: true,
     instrumentStatus: "operational",
     instrumentType: "Barracuda",
     IDITnumber: "NA",
+    startTime: "2020-05-15T08:24:25",
+    cycleLength: 5,
   },
   {
     instrumentName: "B07",
@@ -63,6 +68,8 @@ const seqData = [
     instrumentStatus: "down",
     instrumentType: "Barracuda",
     IDITnumber: "IDIT-1618",
+    startTime: "NA",
+    cycleLength: "NA",
   },
   {
     instrumentName: "B13",
@@ -73,6 +80,8 @@ const seqData = [
     instrumentStatus: "out of lab",
     instrumentType: "Barracuda",
     IDITnumber: "IDIT-1630",
+    startTime: "NA",
+    cycleLength: "NA",
   },
   {
     instrumentName: "B09",
@@ -83,26 +92,32 @@ const seqData = [
     instrumentStatus: "operational",
     instrumentType: "Barracuda",
     IDITnumber: "NA",
+    startTime: "2020-05-15T07:49:16",
+    cycleLength: 5,
   },
   {
     instrumentName: "B08",
     FCID: "AA1234567-ABB",
-    currentCycle: 120,
-    totalCycle: 175,
+    currentCycle: 32,
+    totalCycle: 75,
     backW: true,
     instrumentStatus: "validation needed",
     instrumentType: "Barracuda",
     IDITnumber: "IDIT-1613",
+    startTime: "2020-05-15T10:12:57",
+    cycleLength: 7,
   },
   {
     instrumentName: "B03",
     FCID: "AA1234567-ABB",
     currentCycle: 93,
-    totalCycle: 175,
+    totalCycle: 215,
     backW: true,
     instrumentStatus: "operational",
     instrumentType: "Barracuda",
     IDITnumber: "NA",
+    startTime: "2020-05-15T07:17:59",
+    cycleLength: 5,
   },
   {
     instrumentName: "B06",
@@ -113,21 +128,7 @@ const seqData = [
     instrumentStatus: "operational",
     instrumentType: "Barracuda",
     IDITnumber: "NA",
+    startTime: "2020-05-15T12:31:53",
+    cycleLength: 5,
   },
 ];
-
-// var app = http.createServer(function (req, res) {
-//   res.setHeader("Content-Type", "application/json");
-//   res.end(JSON.stringify({ seqData }));
-// });
-// app.listen(8080);
-
-app.use(cors());
-
-app.get("/", function (req, res, next) {
-  res.json(seqData);
-});
-
-app.listen(8080, function () {
-  console.log("CORS-enabled web server listening on port 8080");
-});
