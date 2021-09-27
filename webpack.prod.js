@@ -12,10 +12,10 @@ module.exports = merge(common, {
   output: {
     filename: "main.[contenthash].js",
     path: path.resolve(__dirname, "public"),
-    assetModuleFilename: "images/[hash][ext]",
+    assetModuleFilename: "assets/[contenthash][ext]",
   },
   plugins: [
-    new MiniCssExtractPlugin({ filename: "[name].[contenthash].css" }),
+    new MiniCssExtractPlugin({ filename: "toots.[name].[contenthash].css" }),
     new CleanWebpackPlugin(),
   ],
   module: {
