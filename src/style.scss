@@ -48,12 +48,6 @@ h1 {
   height: 50px;
 }
 
-@media only screen and (max-width: 600px) {
-  .navlink {
-    font-size: 0.75em;
-  }
-}
-
 /***********************************************************************
  *  Navbar Container
  **********************************************************************/
@@ -111,12 +105,17 @@ a {
 }
 
 .cover-text {
-  color: var(--dkGrey);
-  font-size: 2.3em;
+  color: var(--almostBlack);
+  font-size: 2.5em;
   font-weight: bolder;
   margin: 2em 0em 2em 0em;
   text-align: center;
   text-shadow: -1px 1px 20px var(--medGrey);
+  border-radius: 5px;
+  border: 1px rgb(225, 225, 225) solid;
+  padding: 0.5em 1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 5px 20px rgba(108, 108, 108, 0.05);
 }
 
 .refresh-button {
@@ -308,4 +307,10 @@ p {
   text-shadow: 0px 0px 5px rgba(255, 109, 30, 0.351);
   border-radius: 5px;
   border: 1px solid rgba(255, 109, 30, 0.351);
+}
+
+@media only screen and (max-width: 600px) {
+
+ 
+
 }
