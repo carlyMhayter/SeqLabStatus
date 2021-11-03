@@ -1,10 +1,10 @@
-export function randomDate(start, end) {
+function randomDate(start, end) {
   return new Date(
     start.getTime() + Math.random() * (end.getTime() - start.getTime())
   );
 }
 
-export function intializeArray() {
+function intializeArray() {
   let instrumentNAMES = [...Array(15)].map((y, i) => {
     let name = "";
     let num = Math.floor(1 + Math.random() * 20);
@@ -25,7 +25,7 @@ export function intializeArray() {
   return [...new Set(instrumentNAMES)];
 }
 
-export function populateInstruments(instrumentNameArray) {
+function populateInstruments(instrumentNameArray) {
   //generating FCIDS
   const loChanceArray = [1, 3, 5, 7, 9, 2, 4];
   const evenChanceArray = [1, 2, 3, 4];
@@ -35,6 +35,7 @@ export function populateInstruments(instrumentNameArray) {
   let cycleNumbers = [22, 52, 75, 102, 120, 180, 210];
   let cycleLengths = [3, 4, 5, 6];
   let instrumentArray = new Array();
+  let IDITnumbers = "NA";
 
   instrumentNameArray.forEach((instrumentNAME) => {
     const machine = new Object({ instrumentName: instrumentNAME });
@@ -46,7 +47,7 @@ export function populateInstruments(instrumentNameArray) {
     let machineUp = true;
     let startingTime = new Date();
     let totalCycles = 1;
-    let currentCycle = 1;
+    let currentCycles = 1;
 
     if (
       loChanceArray[Math.floor(Math.random() * loChanceArray.length)] % 2 ===
@@ -79,6 +80,7 @@ export function populateInstruments(instrumentNameArray) {
         new Date(2021, 10, 12, 20)
       );
       machine.startTime = startingTime;
+      // machine.startTime = startingTime.toString().slice(0, 24);
       totalCycles =
         cycleNumbers[Math.floor(Math.random() * cycleNumbers.length)];
       currentCycles = Math.floor(Math.random() * totalCycles);
@@ -95,7 +97,10 @@ export function populateInstruments(instrumentNameArray) {
       } else {
         machine.cycleLength = 4;
       }
+    } else {
+      IDITnumbers = "IDIT-" + ([Math.round(Math.random() * 4000)] - 1000);
     }
+    machine.IDITnumber = IDITnumbers;
     // console.log("here is the instrument object:", machine);
     instrumentArray.push(machine);
   });
@@ -108,3 +113,5 @@ export function randomizeInstrumentData() {
   const instrumentArray = populateInstruments(instrumentNames);
   return instrumentArray;
 }
+
+// randomizeInstrumentData();

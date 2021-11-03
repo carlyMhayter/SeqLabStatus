@@ -76,7 +76,7 @@ export function addUpInfo(instrument) {
   const BWtime = instrument.backW ? 40 : 0;
   const minsCycles =
     40 + instrument.totalCycle * instrument.cycleLength + BWtime;
-  const dt = DateTime.fromISO(instrument.startTime);
+  const dt = DateTime.fromJSDate(instrument.startTime);
   const startTimeNice = dt.toLocaleString(DateTime.DATETIME_SHORT);
   const endTimeNice = dt
     .plus({ minutes: minsCycles })

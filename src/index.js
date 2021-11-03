@@ -1,8 +1,9 @@
 import { getSeqData } from "./app/app";
-import { randomizeInstrumentData } from "./app/instrumentOptions";
+import { randomizeInstrumentData } from "./app/utils/instrumentOptions";
 
 // import { instruments } from "./app/utils/instrumentData";
 import "./style.scss";
+let instruments = [];
 
 const refreshButton = document.getElementById("refresh-button");
 
@@ -12,4 +13,5 @@ getSeqData(instruments);
 refreshButton.addEventListener("click", () => {
   instruments = randomizeInstrumentData();
   getSeqData(instruments);
+  console.log("inside event listener:", instruments);
 });

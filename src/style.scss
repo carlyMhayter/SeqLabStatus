@@ -116,6 +116,10 @@ a {
   padding: 0.5em 1em;
   background-color: rgba(255, 255, 255, 0.8);
   box-shadow: 0px 5px 20px rgba(108, 108, 108, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .refresh-button {
@@ -143,6 +147,21 @@ a {
 
 p {
   margin: 0px 0px;
+}
+
+.explanation-container {
+  border: 2px red solid;
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mini-explain {
+  font-size: 15px;
+  border: 2px greenyellow solid;
 }
 /***********************************************************************
  *  footer
@@ -310,7 +329,4 @@ p {
 }
 
 @media only screen and (max-width: 600px) {
-
- 
-
 }
