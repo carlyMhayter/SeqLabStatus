@@ -1,5 +1,5 @@
 import { getSeqData } from "./app/app";
-import { randomizeInstrumentData } from "./app/utils/instrumentOptions";
+import { randomizeInstrumentData } from "./assets/utils/instrumentOptions";
 
 // import { instruments } from "./app/utils/instrumentData";
 import "./style.scss";

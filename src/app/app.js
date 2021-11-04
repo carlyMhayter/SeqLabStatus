@@ -1,9 +1,10 @@
-import { removeAllChildNodes } from "./utils/infoFunctions";
-import { getSeqDatafromAPI } from "./utils/infoFunctions";
-import { addBasicInfo } from "./utils/infoFunctions";
-import { addDownInfo } from "./utils/infoFunctions";
-import { addUpInfo } from "./utils/infoFunctions";
-import { addUpInfoHover } from "./utils/infoFunctions";
+import {
+  removeAllChildNodes,
+  addBasicInfo,
+  addDownInfo,
+  addUpInfo,
+  addUpInfoHover,
+} from "../assets/utils/infoFunctions";
 
 const instruContainer = document.getElementById("instru-container");
 const br = document.createElement("br");
